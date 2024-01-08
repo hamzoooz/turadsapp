@@ -5,7 +5,7 @@ import 'package:turads/constant/colors.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
-  void _onClick1() {}
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,7 +19,7 @@ class Home extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             // For User Account
-            Column(
+            const Column(
               children: [
                 UserAccountsDrawerHeader(
                   decoration: BoxDecoration(
@@ -33,7 +33,9 @@ class Home extends StatelessWidget {
                       foregroundImage: AssetImage("assets/images/favicon.png")),
                   accountName: Text('TURADS LTD'),
                   accountEmail: Text("info@turads.com"),
+               
                 ),
+
                 ListTile(
                   title: Text('Home'),
                   leading: Icon(Icons.home),
@@ -66,10 +68,8 @@ class Home extends StatelessWidget {
               padding: EdgeInsets.only(left: 40),
               margin: EdgeInsets.only(bottom: 10.0),
               child: Row(
-                children: [
-                  Text( "devloped by themezoz.com",  style: TextStyle(   fontSize: 16,
-                    ),
-                  ),
+                children: const [
+                  Text( "devloped by themezoz.com",  style: TextStyle(   fontSize: 16,  ), ),
                   Icon(Icons.copyright),
                 ],
               ),
@@ -93,12 +93,9 @@ class Home extends StatelessWidget {
                     Positioned(
                         top: -5.0,
                         child: Container(
-                          child: Text('9',
-                              style:
-                                  TextStyle(fontSize: 16, color: whitecolor)),
                           padding: EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                              color: textcolor, shape: BoxShape.circle),
+                          decoration: BoxDecoration(  color: textcolor, shape: BoxShape.circle),
+                          child: Text('9',    style:   TextStyle(fontSize: 16, color: whitecolor)),
                         )),
                   ],
                 ),
